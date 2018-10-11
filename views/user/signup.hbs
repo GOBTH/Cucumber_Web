@@ -1,0 +1,68 @@
+<!--banner-->
+<div class="banner-top">
+    <div class="container">
+        <h1>Đăng kí</h1>
+    </div>
+</div>
+<!--login-->
+<div class="container">
+    <div class="login">
+        {{#if message}}
+            <div class="alert alert-danger">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{message}}
+            </div>
+        {{/if}}
+        <form method="post">
+            <div class="col-md-6 login-do">
+                <div class="login-mail">
+                    <input type="text" placeholder="Tên đăng nhập" required="" name="username">
+                    <i  class="glyphicon glyphicon-user"></i>
+                </div>
+                <div class="login-mail">
+                    <input type="password" placeholder="Mật khẩu" required="" name="password">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </div>
+                <div class="login-mail">
+                    <input type="password" placeholder="Nhập lại mật khẩu" required="" name="repassword">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </div>
+                <div class="login-mail">
+                    <input type="email" placeholder="Email" required="" name="email" required="" value="{{email}}">
+                    <i class=" 	glyphicon glyphicon-envelope"></i>
+                </div>
+                <div class="login-mail">
+                    <input type="text" placeholder="Tên đầy đủ" required="" name="fullname" required="">
+                    <i class="glyphicon glyphicon-user"></i>
+                </div>
+                <div class="login-mail">
+                    <label>Giới tính</label>
+                    <select id="selectbasic" name="gender" class="form-control">
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                    </select>
+                </div>
+                <div class="login-mail">
+                   <label>Ngày sinh :</label> <input type="date" name="birthday" >
+                    <i class=" 	glyphicon glyphicon-calendar"></i>
+                </div>
+                <label class="hvr-skew-backward">
+                    <input type="submit" value="Đăng kí">
+                </label>
+            </div>
+            <div class="col-md-6 login-right">
+                <h3>Đăng nhập</h3>
+
+                <p>Nếu đã có tài khoản.
+                </p>
+                <a href="/login" class=" hvr-skew-backward">Đăng nhập</a>
+
+            </div>
+
+            <div class="clearfix"> </div>
+        </form>
+    </div>
+    <br><br>
+</div>
+
+<!--//login-->

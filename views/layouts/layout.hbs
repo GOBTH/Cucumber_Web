@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+  <html>
+  <head>
+      <title>{{title}}</title>
+      <link rel="shortcut icon" href="/images/favion.ico" />
+
+      <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+      <!-- Custom Theme files -->
+      <!--theme-style-->
+      <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+      <!--//theme-style-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+      <!--theme-style-->
+      <link href="/stylesheets/style4.css" rel="stylesheet" type="text/css" media="all" />
+      <!--//theme-style-->
+      <script src="/javascripts/jquery.min.js"></script>
+      <!--- start-rate---->
+      <script src="/javascripts/jstarbox.js"></script>
+      <link rel="stylesheet" href="/stylesheets/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+      <script src="/javascripts/eshopScript.js"></script>
+      <link href="/stylesheets/form.css" rel="stylesheet" type="text/css" media="all" />
+      <link rel='stylesheet' href='/stylesheets/mystyle.css' />
+      <script type="text/javascript">
+          jQuery(function() {
+              jQuery('.starbox').each(function() {
+                  var starbox = jQuery(this);
+                  starbox.starbox({
+                      average: starbox.attr('data-start-value'),
+                      changeable: starbox.hasClass('unchangeable') ? false : starbox.hasClass('clickonce') ? 'once' : true,
+                      ghosting: starbox.hasClass('ghosting'),
+                      autoUpdateAverage: starbox.hasClass('autoupdate'),
+                      buttons: starbox.hasClass('smooth') ? false : starbox.attr('data-button-count') || 5,
+                      stars: starbox.attr('data-star-count') || 5
+                  }).bind('starbox-value-changed', function(event, value) {
+                      if(starbox.hasClass('random')) {
+                          var val = Math.random();
+                          starbox.next().text(' '+val);
+                          return val;
+                      }
+                  })
+              });
+          });
+      </script>
+      <!---//End-rate---->
+
+  </head>
+
+  <body>
+  <!--Phan Header , cai dat tai /views/partials/header.hbs-->
+  {{> header}}
+
+    
+
+    <!-- phần nội dung -->
+              {{{body}}}
+
+
+
+  <!--Phan Footer , cai dat tai /views/partials/footer.hbs-->
+  {{> footer}}
+  <script src="/javascripts/simpleCart.min.js"> </script>
+    <script src="/javascripts/comment.js"> </script>
+  <!-- slide -->
+  <script src="/javascripts/bootstrap.min.js"></script>
+  <!--light-box-files -->
+  <script src="/javascripts/jquery.chocolat.js"></script>
+  <link rel="stylesheet" href="/stylesheets/chocolat.css" type="text/css" media="screen" charset="utf-8">
+  <!--light-box-files -->
+  <script type="text/javascript" charset="utf-8">
+      $(function() {
+          $('a.picture').Chocolat();
+      });
+  </script>
+  </body>
+
+  <!--JAVASCRIPT-->
+
+
+</html>
